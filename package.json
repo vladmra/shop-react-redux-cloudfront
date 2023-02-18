@@ -29,7 +29,7 @@
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.9",
     "@mui/material": "^5.11.9",
-    "@mui/styles": "^5.11.9",
+    "@mui/system": "^5.11.9",
     "@types/yup": "^0.29.14",
     "axios": "^0.27.2",
     "formik": "^2.2.9",
@@ -60,7 +60,6 @@
     "serverless": "^3.20.0",
     "serverless-finch": "^4.0.0",
     "serverless-s3-cleaner": "^2.0.1",
-    "serverless-single-page-app-plugin": "file:./.serverless_plugins",
     "typescript": "^4.7.4",
     "vite": "^2.9.13",
     "vitest": "^0.17.1"
