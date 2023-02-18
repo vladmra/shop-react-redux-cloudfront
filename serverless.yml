@@ -19,7 +19,7 @@ plugins:
 
 custom:
   client:
-    bucketName: my-store-app
+    bucketName: my-shop-cloud-development-course
     distributionFolder: dist
   s3BucketName: ${self:custom.client.bucketName}
 
@@ -68,7 +68,7 @@ resources:
         CloudFrontOriginAccessIdentityConfig:
           Comment: Access identity between CloudFront and S3 bucket
 
-    ## Specifying the CloudFront Distribution to server your Web Application
+    ## Specifying the CloudFront Distribution to serve your Web Application
     WebAppCloudFrontDistribution:
       Type: AWS::CloudFront::Distribution
       Properties:
