@@ -33,7 +33,7 @@ export default function Header() {
             underline="none"
             to="/"
           >
-            My Store!
+            My Store! Now with automated S3 and CloudFront deployment with serverless
           </Link>
         </Typography>
 
