@@ -5,6 +5,7 @@ import { CartItem } from "~/models/CartItem";
 import { Order } from "~/models/Order";
 import { AvailableProduct, Product } from "~/models/Product";
 
+// TODO: remove unused handlers
 export const handlers = [
   rest.get(`${API_PATHS.bff}/product`, (req, res, ctx) => {
     return res(ctx.status(200), ctx.delay(), ctx.json<Product[]>(products));
