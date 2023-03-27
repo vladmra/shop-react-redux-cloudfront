@@ -7,9 +7,15 @@ export const ProductSchema = Yup.object({
   price: Yup.number().positive().required().defined().default(0),
 });
 
-export const AvailableProductSchema = ProductSchema.shape({
+export const BookSchema = ProductSchema.shape({
+  author: Yup.string().required().default(""),
+  publisher: Yup.string().required().default(""),
+  publicationDate: Yup.string().required().default(""),
+})
+
+export const AvailableProductSchema = BookSchema.shape({
   count: Yup.number().integer().min(0).required().defined().default(0),
 });
 
-export type Product = Yup.InferType<typeof ProductSchema>;
+export type Product = Yup.InferType<typeof BookSchema>;
 export type AvailableProduct = Yup.InferType<typeof AvailableProductSchema>;

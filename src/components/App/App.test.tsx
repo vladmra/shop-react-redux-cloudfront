@@ -18,6 +18,9 @@ test("Renders products list", async () => {
       description: "Product 1 description",
       price: 1,
       count: 1,
+      author: "Author 1",
+      publisher: "Publisher 1",
+      publicationDate: "2000-01-01"
     },
     {
       id: "2",
@@ -25,6 +28,9 @@ test("Renders products list", async () => {
       description: "Product 2 description",
       price: 2,
       count: 2,
+      author: "Author 2",
+      publisher: "Publisher 2",
+      publicationDate: "2000-01-01"
     },
   ];
   server.use(

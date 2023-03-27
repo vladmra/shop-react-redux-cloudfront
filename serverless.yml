@@ -30,6 +30,7 @@ custom:
       - ${self:custom.client.bucketName}
 
 resources:
+  Description: Frontend stack for My Shop app
   Resources:
     ## Specifying the S3 Bucket
     WebAppS3Bucket:
