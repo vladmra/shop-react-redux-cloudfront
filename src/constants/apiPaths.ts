@@ -1,10 +1,11 @@
-const apiGateway = import.meta.env.VITE_API_GATEWAY_ID;
+const productsServiceUrl = import.meta.env.VITE_PRODUCTS_SERVICE_URL;
+const importServiceUrl = import.meta.env.VITE_IMPORT_SERVICE_URL;
 
 const API_PATHS = {
   product: "https://.execute-api.eu-west-1.amazonaws.com/dev",
   order: "https://.execute-api.eu-west-1.amazonaws.com/dev",
-  import: "https://.execute-api.eu-west-1.amazonaws.com/dev",
-  bff: `https://${apiGateway}.execute-api.eu-west-1.amazonaws.com/`,
+  import: importServiceUrl,
+  bff: productsServiceUrl,
   cart: "https://.execute-api.eu-west-1.amazonaws.com/dev",
 };
 
