@@ -1,6 +1,5 @@
 import React from "react";
 import { Order, OrderItem } from "~/models/Order";
-import axios from "axios";
 import { useParams } from "react-router-dom";
 import PaperLayout from "~/components/PaperLayout/PaperLayout";
 import Typography from "@mui/material/Typography";
@@ -23,6 +22,7 @@ import TableContainer from "@mui/material/TableContainer";
 import Box from "@mui/material/Box";
 import { useQueries } from "react-query";
 import { useInvalidateOrder, useUpdateOrderStatus } from "~/queries/orders";
+import apiClient from "~/apiClient";
 
 type FormValues = {
   status: OrderStatus;
@@ -35,14 +35,14 @@ export default function PageOrder() {
     {
       queryKey: ["order", { id }],
       queryFn: async () => {
-        const res = await axios.get<Order>(`${API_PATHS.order}/order/${id}`);
+        const res = await apiClient.get<Order>(`${API_PATHS.order}/order/${id}`);
         return res.data;
       },
     },
     {
       queryKey: "products",
       queryFn: async () => {
-        const res = await axios.get<AvailableProduct[]>(
+        const res = await apiClient.get<AvailableProduct[]>(
           `${API_PATHS.bff}/product/available`
         );
         return res.data;
